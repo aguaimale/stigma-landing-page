@@ -10,19 +10,26 @@
    "routes": [
       {
          "src": "/admin",
-         "dest": "/admin.html"
+         "dest": "/admin.html",
+         "status": 200
       },
       {
          "src": "/producto",
-         "dest": "/producto.html"
+         "dest": "/producto.html",
+         "status": 200
       },
       {
          "src": "/api/(.*)",
          "dest": "/server.js"
       },
       {
+         "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
+         "dest": "/$1"
+      },
+      {
          "src": "/(.*)",
-         "dest": "/index.html"
+         "dest": "/index.html",
+         "status": 200
       }
    ],
    "env": {
