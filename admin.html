@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>STIGMA - Panel de Administración</title>
+      <link rel="stylesheet" href="admin.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Monaco&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+   </head>
+   <body>
+      <!-- Login Screen -->
+      <div id="loginScreen" class="login-screen">
+         <div class="login-container">
+            <div class="login-header">
+               <img
+                  src="./public/images/stigma_transparente.png"
+                  alt="STIGMA Logo"
+                  class="login-logo"
+               />
+               <h1>Panel de Administración</h1>
+               <p>Gestiona el contenido de tu sitio web</p>
+            </div>
+            <form id="loginForm" class="login-form">
+               <div class="form-group">
+                  <label for="username">Usuario</label>
+                  <input type="text" id="username" name="username" required />
+               </div>
+               <div class="form-group">
+                  <label for="password">Contraseña</label>
+                  <input
+                     type="password"
+                     id="password"
+                     name="password"
+                     required
+                  />
+               </div>
+               <button type="submit" class="login-btn">Iniciar Sesión</button>
+            </form>
+         </div>
+      </div>
+
+      <!-- Admin Panel -->
+      <div id="adminPanel" class="admin-panel hidden">
+         <!-- Header -->
+         <header class="admin-header">
+            <div class="header-content">
+               <div class="header-left">
+                  <img
+                     src="./public/images/stigma_transparente.png"
+                     alt="STIGMA Logo"
+                     class="header-logo"
+                  />
+                  <h2>Panel de Administración</h2>
+               </div>
+               <div class="header-right">
+                  <button id="logoutBtn" class="logout-btn">
+                     <i class="fas fa-sign-out-alt"></i>
+                     Cerrar Sesión
+                  </button>
+               </div>
+            </div>
+         </header>
+
+         <!-- Main Content -->
+         <main class="admin-main">
+            <!-- Navigation -->
+            <nav class="admin-nav">
+               <button class="nav-btn active" data-section="hero">
+                  <i class="fas fa-home"></i>
+                  Hero Section
+               </button>
+               <button class="nav-btn" data-section="manifiesto">
+                  <i class="fas fa-scroll"></i>
+                  Manifiesto
+               </button>
+               <button class="nav-btn" data-section="catalogo">
+                  <i class="fas fa-shopping-bag"></i>
+                  Catálogo
+               </button>
+               <button class="nav-btn" data-section="archivo">
+                  <i class="fas fa-archive"></i>
+                  Archivo
+               </button>
+               <button class="nav-btn" data-section="contacto">
+                  <i class="fas fa-envelope"></i>
+                  Contacto
+               </button>
+               <button class="nav-btn" data-section="productos">
+                  <i class="fas fa-box"></i>
+                  Productos
+               </button>
+            </nav>
+
+            <!-- Content Area -->
+            <div class="content-area">
+               <!-- Hero Section Editor -->
+               <div id="heroSection" class="section-editor active">
+                  <h3>Hero Section</h3>
+                  <div class="editor-grid">
+                     <div class="editor-group">
+                        <label>Badge Text</label>
+                        <input
+                           type="text"
+                           id="heroBadgeText"
+                           value="NUEVA COLECCIÓN"
+                        />
+                     </div>
+                     <div class="editor-group">
+                        <label>Badge Year</label>
+                        <input type="text" id="heroBadgeYear" value="2025" />
+                     </div>
+                     <div class="editor-group">
+                        <label>Título Principal</label>
+                        <input
+                           type="text"
+                           id="heroTitle"
+                           value="STIGMA COLLECTION"
+                        />
+                     </div>
+                     <div class="editor-group">
+                        <label>Tagline</label>
+                        <input
+                           type="text"
+                           id="heroTagline"
+                           value="DESATA TU ESENCIA"
+                        />
+                     </div>
+                     <div class="editor-group full-width">
+                        <label>Título del Statement</label>
+                        <input
+                           type="text"
+                           id="heroStatementTitle"
+                           value="REBELDÍA SIN LÍMITES"
+                        />
+                     </div>
+                     <div class="editor-group full-width">
+                        <label>Texto del Statement</label>
+                        <textarea id="heroStatementText" rows="4">
+Rompe las reglas. Define tu estilo. Piezas únicas para almas audaces que se atreven a ser diferentes. Cada accesorio es una declaración de guerra contra la mediocridad.</textarea
+                        >
+                     </div>
+                  </div>
+                  <div class="image-manager">
+                     <h4>Imágenes del Hero</h4>
+                     <div class="image-grid">
+                        <div class="image-item">
+                           <label>Imagen de Fondo</label>
+                           <div class="image-upload">
+                              <img
+                                 id="heroBgPreview"
+                                 src="./public/images/bg-hero.JPG"
+                                 alt="Background"
+                              />
+                              <input
+                                 type="file"
+                                 id="heroBgInput"
+                                 accept="image/*"
+                              />
+                              <button type="button" class="upload-btn">
+                                 Cambiar Imagen
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Manifiesto Section Editor -->
+               <div id="manifiestoSection" class="section-editor">
+                  <h3>Manifiesto</h3>
+                  <div class="editor-grid">
+                     <div class="editor-group">
+                        <label>Título de la Sección</label>
+                        <input
+                           type="text"
+                           id="manifiestoTitle"
+                           value="NUESTRO MANIFIESTO"
+                        />
+                     </div>
+                     <div class="editor-group full-width">
+                        <label>Subtítulo</label>
+                        <input
+                           type="text"
+                           id="manifiestoSubtitle"
+                           value="LA FILOSOFÍA DETRÁS DE STIGMA"
+                        />
+                     </div>
+                     <div class="editor-group full-width">
+                        <label>Descripción Principal</label>
+                        <textarea id="manifiestoDescription" rows="6">
+STIGMA nace de la rebeldía, de la necesidad de romper con lo establecido y crear algo verdaderamente único. Cada pieza es una declaración de guerra contra la mediocridad, una celebración de la individualidad y la audacia.</textarea
+                        >
+                     </div>
+                  </div>
+                  <div class="image-manager">
+                     <h4>Imágenes del Manifiesto</h4>
+                     <div class="image-grid">
+                        <div class="image-item">
+                           <label>Imagen Principal</label>
+                           <div class="image-upload">
+                              <img
+                                 id="manifiestoImgPreview"
+                                 src="./public/images/img-manifiesto.JPG"
+                                 alt="Manifiesto"
+                              />
+                              <input
+                                 type="file"
+                                 id="manifiestoImgInput"
+                                 accept="image/*"
+                              />
+                              <button type="button" class="upload-btn">
+                                 Cambiar Imagen
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Catálogo Section Editor -->
+               <div id="catalogoSection" class="section-editor">
+                  <h3>Catálogo</h3>
+                  <div class="editor-grid">
+                     <div class="editor-group">
+                        <label>Título de la Sección</label>
+                        <input
+                           type="text"
+                           id="catalogoTitle"
+                           value="NUESTRO CATÁLOGO"
+                        />
+                     </div>
+                     <div class="editor-group full-width">
+                        <label>Subtítulo</label>
+                        <input
+                           type="text"
+                           id="catalogoSubtitle"
+                           value="PIEZAS ÚNICAS PARA ALMAS AUDACES"
+                        />
+                     </div>
+                     <div class="editor-group full-width">
+                        <label>Descripción</label>
+                        <textarea id="catalogoDescription" rows="4">
+Descubre nuestra colección de accesorios únicos. Cada pieza está diseñada para aquellos que se atreven a ser diferentes, para quienes buscan expresar su individualidad a través de la moda.</textarea
+                        >
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Archivo Section Editor -->
+               <div id="archivoSection" class="section-editor">
+                  <h3>Archivo</h3>
+                  <div class="editor-grid">
+                     <div class="editor-group">
+                        <label>Título de la Sección</label>
+                        <input
+                           type="text"
+                           id="archivoTitle"
+                           value="ARCHIVO VISUAL"
+                        />
+                     </div>
+                     <div class="editor-group full-width">
+                        <label>Subtítulo</label>
+                        <input
+                           type="text"
+                           id="archivoSubtitle"
+                           value="CAMPAÑAS Y EDITORIALES"
+                        />
+                     </div>
+                     <div class="editor-group full-width">
+                        <label>Descripción</label>
+                        <textarea id="archivoDescription" rows="4">
+Explora nuestras campañas más icónicas y editoriales que han definido la estética de STIGMA. Cada imagen cuenta una historia de rebeldía y autenticidad.</textarea
+                        >
+                     </div>
+                  </div>
+                  <div class="image-manager">
+                     <h4>Imágenes del Archivo</h4>
+                     <div class="image-grid" id="archivoImageGrid">
+                        <div class="image-item">
+                           <label>Imagen 1</label>
+                           <div class="image-upload">
+                              <img
+                                 src="./public/images/bg-archivo.JPG"
+                                 alt="Archivo 1"
+                              />
+                              <input type="file" accept="image/*" />
+                              <button type="button" class="upload-btn">
+                                 Cambiar Imagen
+                              </button>
+                           </div>
+                        </div>
+                        <div class="image-item">
+                           <label>Imagen 2</label>
+                           <div class="image-upload">
+                              <img
+                                 src="./public/images/DSCF1488.JPG"
+                                 alt="Archivo 2"
+                              />
+                              <input type="file" accept="image/*" />
+                              <button type="button" class="upload-btn">
+                                 Cambiar Imagen
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                     <button type="button" class="add-image-btn">
+                        <i class="fas fa-plus"></i>
+                        Agregar Nueva Imagen
+                     </button>
+                  </div>
+               </div>
+
+               <!-- Contacto Section Editor -->
+               <div id="contactoSection" class="section-editor">
+                  <h3>Contacto</h3>
+                  <div class="editor-grid">
+                     <div class="editor-group">
+                        <label>Título de la Sección</label>
+                        <input
+                           type="text"
+                           id="contactoTitle"
+                           value="CONTÁCTANOS"
+                        />
+                     </div>
+                     <div class="editor-group full-width">
+                        <label>Subtítulo</label>
+                        <input
+                           type="text"
+                           id="contactoSubtitle"
+                           value="CONECTA CON STIGMA"
+                        />
+                     </div>
+                     <div class="editor-group">
+                        <label>Email</label>
+                        <input
+                           type="email"
+                           id="contactoEmail"
+                           value="info@stigma.com"
+                        />
+                     </div>
+                     <div class="editor-group">
+                        <label>Instagram</label>
+                        <input
+                           type="text"
+                           id="contactoInstagram"
+                           value="@stigma_official"
+                        />
+                     </div>
+                     <div class="editor-group">
+                        <label>WhatsApp</label>
+                        <input
+                           type="text"
+                           id="contactoWhatsapp"
+                           value="+1 (234) 567-890"
+                        />
+                     </div>
+                     <div class="editor-group full-width">
+                        <label>Descripción</label>
+                        <textarea id="contactoDescription" rows="4">
+¿Tienes preguntas sobre nuestros productos? ¿Quieres colaborar con STIGMA? No dudes en contactarnos. Estamos aquí para ayudarte a encontrar tu estilo único.</textarea
+                        >
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Productos Section Editor -->
+               <div id="productosSection" class="section-editor">
+                  <h3>Gestión de Productos</h3>
+                  <div class="products-manager">
+                     <div class="products-header">
+                        <h4>Productos Actuales</h4>
+                        <button type="button" class="add-product-btn">
+                           <i class="fas fa-plus"></i>
+                           Agregar Producto
+                        </button>
+                     </div>
+                     <div class="products-list" id="productsList">
+                        <!-- Los productos se cargarán dinámicamente -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+
+         <!-- Save Button -->
+         <div class="save-section">
+            <button id="saveAllBtn" class="save-btn">
+               <i class="fas fa-save"></i>
+               Guardar Todos los Cambios
+            </button>
+            <button
+               id="testSyncBtn"
+               class="save-btn"
+               style="background: #4caf50; margin-left: 1rem"
+            >
+               <i class="fas fa-sync"></i>
+               Probar Sincronización
+            </button>
+         </div>
+      </div>
+
+      <!-- Product Modal -->
+      <div id="productModal" class="modal hidden">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h3 id="modalTitle">Agregar Producto</h3>
+               <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               <form id="productForm">
+                  <div class="form-row">
+                     <div class="form-group">
+                        <label for="productName">Nombre del Producto</label>
+                        <input type="text" id="productName" required />
+                     </div>
+                     <div class="form-group">
+                        <label for="productPrice">Precio</label>
+                        <input
+                           type="text"
+                           id="productPrice"
+                           placeholder="$199.00"
+                           required
+                        />
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="productDescription">Descripción</label>
+                     <textarea
+                        id="productDescription"
+                        rows="3"
+                        required
+                     ></textarea>
+                  </div>
+                  <div class="form-group">
+                     <label for="productImages">Imágenes del Producto</label>
+                     <input
+                        type="file"
+                        id="productImages"
+                        multiple
+                        accept="image/*"
+                     />
+                     <div
+                        class="image-preview-grid"
+                        id="productImagePreview"
+                     ></div>
+                  </div>
+                  <div class="form-actions">
+                     <button type="button" class="cancel-btn">Cancelar</button>
+                     <button type="submit" class="save-btn">
+                        Guardar Producto
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <script src="admin.js"></script>
+   </body>
+</html>

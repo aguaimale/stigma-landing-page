@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>STIGMA - Desata tu Esencia</title>
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Monaco&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Bahiana&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+   </head>
+   <body>
+      <!-- Hidden SVG for clip-paths -->
+      <svg width="0" height="0" style="position: absolute; z-index: -1">
+         <defs>
+            <!-- Square Shape with Border Radius -->
+            <clipPath id="square-shape">
+               <rect x="0" y="0" width="100" height="100" rx="12" ry="12" />
+            </clipPath>
+         </defs>
+      </svg>
+
+      <!-- Header -->
+      <header class="header">
+         <div class="container">
+            <a href="#" class="logo">
+               <img
+                  src="./public/images/stigma_transparente.png"
+                  alt="STIGMA Logo"
+                  class="logo-img"
+               />
+               <span class="logo-text">STIGMA</span>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+               <span class="hamburger-line"></span>
+               <span class="hamburger-line"></span>
+               <span class="hamburger-line"></span>
+            </button>
+
+            <nav class="nav" id="nav">
+               <a href="#inicio" class="nav-link">Inicio</a>
+               <a href="#sobre-stigma" class="nav-link">Manifiesto</a>
+               <a href="#catalogo" class="nav-link">Catálogo</a>
+               <a href="#archivo" class="nav-link">Archivo</a>
+               <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+         </div>
+      </header>
+
+      <main>
+         <!-- Hero Section -->
+         <section id="inicio" class="hero">
+            <div class="lightning-bg"></div>
+            <div class="container">
+               <!-- Hero Header -->
+               <div class="hero-header">
+                  <div class="hero-badge">
+                     <span class="badge-text" id="heroBadgeText"
+                        >NUEVA COLECCIÓN</span
+                     >
+                     <span class="badge-year" id="heroBadgeYear">2025</span>
+                  </div>
+                  <h1 class="hero-title" id="heroTitle">
+                     STIGMA <span class="accent">COLLECTION</span>
+                  </h1>
+                  <p class="hero-tagline" id="heroTagline">
+                     DESATA TU <span class="accent">ESENCIA</span>
+                  </p>
+               </div>
+
+               <!-- Hero Main Content -->
+               <div class="hero-main">
+                  <div class="hero-statement">
+                     <div class="statement-container">
+                        <h2
+                           class="hero-statement-title"
+                           id="heroStatementTitle"
+                        >
+                           "REBELDÍA SIN LÍMITES"
+                        </h2>
+                        <p class="hero-statement-text" id="heroStatementText">
+                           Rompe las reglas. Define tu estilo. Piezas únicas
+                           para almas audaces que se atreven a ser diferentes.
+                           Cada accesorio es una declaración de guerra contra la
+                           mediocridad.
+                        </p>
+                        <div class="hero-features">
+                           <div class="feature-item">
+                              <i class="fas fa-fire feature-icon"></i>
+                              <span class="feature-text">Piezas Únicas</span>
+                           </div>
+                           <div class="feature-item">
+                              <i class="fas fa-gem feature-icon"></i>
+                              <span class="feature-text">Arte Puro</span>
+                           </div>
+                           <div class="feature-item">
+                              <i class="fas fa-heart feature-icon"></i>
+                              <span class="feature-text">Autenticidad</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="hero-visual">
+                     <div class="hero-image-main">
+                        <img
+                           src="./public/images/bg-hero.JPG"
+                           alt="STIGMA Hero Collection"
+                           class="hero-main-img"
+                           id="heroMainImage"
+                        />
+                        <div class="hero-overlay">
+                           <div class="overlay-content">
+                              <div class="overlay-title">STIGMA</div>
+                              <div class="overlay-subtitle">COLLECTION</div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Featured Products Grid -->
+                     <div class="hero-products">
+                        <div class="product-showcase product-showcase-large">
+                           <img
+                              src="./public/images/productos/product1.png"
+                              alt="PIEZA ÚNICA - Featured"
+                              class="showcase-img"
+                           />
+                           <div class="showcase-overlay">
+                              <div class="showcase-info">
+                                 <h4 class="showcase-name">"PIEZA ÚNICA"</h4>
+                                 <p class="showcase-category">
+                                    Edición Limitada
+                                 </p>
+                                 <span class="showcase-price">$299.00</span>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="product-showcase">
+                           <img
+                              src="./public/images/productos/product2.png"
+                              alt="PIEZA REBELDE"
+                              class="showcase-img"
+                           />
+                           <div class="showcase-overlay">
+                              <div class="showcase-info">
+                                 <h4 class="showcase-name">"PIEZA REBELDE"</h4>
+                                 <p class="showcase-category">Nuevo</p>
+                                 <span class="showcase-price">$199.00</span>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="product-showcase">
+                           <img
+                              src="./public/images/productos/product3.png"
+                              alt="PIEZA OSCURA"
+                              class="showcase-img"
+                           />
+                           <div class="showcase-overlay">
+                              <div class="showcase-info">
+                                 <h4 class="showcase-name">"PIEZA OSCURA"</h4>
+                                 <p class="showcase-category">Exclusivo</p>
+                                 <span class="showcase-price">$249.00</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Hero Actions -->
+               <div class="hero-actions">
+                  <div class="action-buttons">
+                     <a href="#catalogo" class="btn btn-primary btn-hero">
+                        <span class="btn-text">EXPLORAR COLECCIÓN</span>
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                     </a>
+                     <a href="#sobre-stigma" class="btn btn-outline btn-hero">
+                        <span class="btn-text">LEER MANIFIESTO</span>
+                        <i class="fas fa-book-open btn-icon"></i>
+                     </a>
+                  </div>
+
+                  <div class="hero-stats">
+                     <div class="stat-item">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">Piezas Únicas</span>
+                     </div>
+                     <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Posibilidades</span>
+                     </div>
+                     <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Autenticidad</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- About STIGMA Section -->
+         <section id="sobre-stigma" class="about">
+            <div class="tree-bg tree-bg-1"></div>
+            <div class="tree-bg tree-bg-2"></div>
+            <div class="container">
+               <div class="section-header">
+                  <h2 class="section-title" id="manifiestoTitle">
+                     <span class="accent">MANIFIESTO</span> STIGMA
+                  </h2>
+                  <p class="section-subtitle" id="manifiestoSubtitle">
+                     La filosofía que define nuestra esencia. Cada palabra es
+                     una declaración de rebeldía.
+                  </p>
+               </div>
+
+               <!-- Main Manifesto Statement -->
+               <div class="manifesto-hero">
+                  <div class="manifesto-statement">
+                     <div class="statement-badge">DECLARACIÓN PRINCIPAL</div>
+                     <h3 class="statement-title">"UNLEASH YOUR INNER REBEL"</h3>
+                     <blockquote class="manifesto-quote">
+                        En STIGMA, creemos que la verdadera expresión nace de la
+                        autenticidad. No seguimos tendencias, las creamos. Cada
+                        pieza es un manifiesto de individualidad, forjado para
+                        aquellos que se atreven a ser diferentes y a llevar su
+                        rebeldía con orgullo.
+                     </blockquote>
+                     <div class="statement-signature">
+                        <span class="signature-line">—</span>
+                        <span class="signature-text">El Manifiesto STIGMA</span>
+                        <span class="signature-year">2024</span>
+                     </div>
+                  </div>
+                  <div class="manifesto-visual">
+                     <img
+                        src="./public/images/img-manifiesto.JPG"
+                        alt="STIGMA Manifesto Visual"
+                        class="manifesto-hero-img"
+                        id="manifiestoImage"
+                     />
+                     <div class="visual-overlay">
+                        <div class="overlay-text">REBELDÍA</div>
+                        <div class="overlay-text">AUTENTICIDAD</div>
+                        <div class="overlay-text">INDIVIDUALIDAD</div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Manifesto Principles -->
+               <div class="manifesto-principles">
+                  <div class="principle-card principle-card-large">
+                     <div class="principle-icon">
+                        <i class="fas fa-fire"></i>
+                     </div>
+                     <h4 class="principle-title">REBELDÍA INHERENTE</h4>
+                     <p class="principle-description">
+                        Nacemos de la necesidad de desafiar lo establecido. Cada
+                        diseño es una declaración de guerra contra la
+                        mediocridad y la conformidad.
+                     </p>
+                     <div class="principle-meta">
+                        <span class="principle-number">01</span>
+                        <span class="principle-category">FILOSOFÍA</span>
+                     </div>
+                  </div>
+
+                  <div class="principle-card">
+                     <div class="principle-icon">
+                        <i class="fas fa-eye"></i>
+                     </div>
+                     <h4 class="principle-title">VISIÓN ÚNICA</h4>
+                     <p class="principle-description">
+                        No seguimos tendencias, las creamos. Inspirados en la
+                        oscuridad y la naturaleza indómita.
+                     </p>
+                     <div class="principle-meta">
+                        <span class="principle-number">02</span>
+                        <span class="principle-category">CREATIVIDAD</span>
+                     </div>
+                  </div>
+
+                  <div class="principle-card">
+                     <div class="principle-icon">
+                        <i class="fas fa-gem"></i>
+                     </div>
+                     <h4 class="principle-title">ARTE PURA</h4>
+                     <p class="principle-description">
+                        Cada pieza es una fusión de arte, diseño y rebeldía
+                        inherente. Meticulosamente conceptualizada y ejecutada.
+                     </p>
+                     <div class="principle-meta">
+                        <span class="principle-number">03</span>
+                        <span class="principle-category">EXCELENCIA</span>
+                     </div>
+                  </div>
+
+                  <div class="principle-card">
+                     <div class="principle-icon">
+                        <i class="fas fa-heart"></i>
+                     </div>
+                     <h4 class="principle-title">EXTENSIÓN DEL ALMA</h4>
+                     <p class="principle-description">
+                        Para quienes entienden que la moda es una extensión del
+                        alma. Cada accesorio declara tu autenticidad.
+                     </p>
+                     <div class="principle-meta">
+                        <span class="principle-number">04</span>
+                        <span class="principle-category">IDENTIDAD</span>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Manifesto Gallery -->
+               <div class="manifesto-gallery">
+                  <div class="gallery-header">
+                     <h3 class="gallery-title">INSPIRACIÓN VISUAL</h3>
+                     <p class="gallery-subtitle">
+                        Momentos que capturan la esencia de STIGMA
+                     </p>
+                  </div>
+                  <div class="gallery-grid">
+                     <div class="gallery-item gallery-item-large">
+                        <img
+                           src="./public/images/DSCF1488.JPG"
+                           alt="Manifesto Inspiration 1"
+                           class="gallery-img"
+                        />
+                        <div class="gallery-overlay">
+                           <div class="gallery-info">
+                              <h4 class="gallery-item-title">"NOCHE ETERNA"</h4>
+                              <p class="gallery-item-category">
+                                 Inspiración Principal
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="gallery-item">
+                        <img
+                           src="./public/images/productos/product1.png"
+                           alt="Manifesto Inspiration 2"
+                           class="gallery-img"
+                        />
+                        <div class="gallery-overlay">
+                           <div class="gallery-info">
+                              <h4 class="gallery-item-title">"ESENCIA PURA"</h4>
+                              <p class="gallery-item-category">
+                                 Concepto Visual
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="gallery-item">
+                        <img
+                           src="./public/images/productos/product2.png"
+                           alt="Manifesto Inspiration 3"
+                           class="gallery-img"
+                        />
+                        <div class="gallery-overlay">
+                           <div class="gallery-info">
+                              <h4 class="gallery-item-title">
+                                 "REBELDÍA OSCURA"
+                              </h4>
+                              <p class="gallery-item-category">Estética</p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="gallery-item">
+                        <img
+                           src="./public/images/productos/product3.png"
+                           alt="Manifesto Inspiration 4"
+                           class="gallery-img"
+                        />
+                        <div class="gallery-overlay">
+                           <div class="gallery-info">
+                              <h4 class="gallery-item-title">
+                                 "INDIVIDUALIDAD"
+                              </h4>
+                              <p class="gallery-item-category">Expresión</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Manifesto Stats -->
+               <div class="manifesto-stats">
+                  <div class="manifesto-stat">
+                     <span class="manifesto-stat-number">∞</span>
+                     <span class="manifesto-stat-label">Posibilidades</span>
+                  </div>
+                  <div class="manifesto-stat">
+                     <span class="manifesto-stat-number">100%</span>
+                     <span class="manifesto-stat-label">Autenticidad</span>
+                  </div>
+                  <div class="manifesto-stat">
+                     <span class="manifesto-stat-number">0</span>
+                     <span class="manifesto-stat-label">Compromisos</span>
+                  </div>
+                  <div class="manifesto-stat">
+                     <span class="manifesto-stat-number">∞</span>
+                     <span class="manifesto-stat-label">Rebeldía</span>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Catalog Section -->
+         <section id="catalogo" class="catalog">
+            <div class="container">
+               <div class="section-header">
+                  <h2 class="section-title" id="catalogoTitle">
+                     <span class="accent">COLECCIÓN</span> STIGMA 2025
+                  </h2>
+                  <p class="section-subtitle" id="catalogoSubtitle">
+                     Piezas únicas que desafían la convención. Cada accesorio es
+                     una declaración de rebeldía y autenticidad.
+                  </p>
+               </div>
+
+               <!-- Catalog Hero -->
+               <div class="catalog-hero">
+                  <div class="catalog-statement">
+                     <div class="catalog-badge">COLECCIÓN PRINCIPAL</div>
+                     <h3 class="catalog-hero-title">"REBELDÍA SIN LÍMITES"</h3>
+                     <p class="catalog-hero-text">
+                        Nuestra colección 2025 representa la evolución del
+                        diseño rebelde. Cada pieza es meticulosamente
+                        conceptualizada para aquellos que se atreven a ser
+                        diferentes y a expresar su autenticidad sin compromisos.
+                     </p>
+                     <div class="catalog-features">
+                        <div class="catalog-feature">
+                           <i class="fas fa-gem catalog-feature-icon"></i>
+                           <span class="catalog-feature-text"
+                              >Materiales Premium</span
+                           >
+                        </div>
+                        <div class="catalog-feature">
+                           <i class="fas fa-palette catalog-feature-icon"></i>
+                           <span class="catalog-feature-text"
+                              >Diseño Único</span
+                           >
+                        </div>
+                        <div class="catalog-feature">
+                           <i class="fas fa-clock catalog-feature-icon"></i>
+                           <span class="catalog-feature-text"
+                              >Edición Limitada</span
+                           >
+                        </div>
+                     </div>
+                  </div>
+                  <div class="catalog-visual">
+                     <div class="catalog-image-main">
+                        <img
+                           src="./public/images/productos/product1.png"
+                           alt="STIGMA Collection Hero"
+                           class="catalog-main-img"
+                        />
+                        <div class="catalog-overlay">
+                           <div class="catalog-overlay-content">
+                              <div class="catalog-overlay-title">STIGMA</div>
+                              <div class="catalog-overlay-subtitle">
+                                 COLLECTION
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Products Showcase -->
+               <div class="products-showcase">
+                  <div class="showcase-header">
+                     <h3 class="showcase-title">PIEZAS DESTACADAS</h3>
+                     <p class="showcase-subtitle">
+                        Descubre las creaciones más audaces de nuestra colección
+                     </p>
+                  </div>
+
+                  <div class="products-grid" id="productsGrid">
+                     <!-- Products will be generated by JavaScript -->
+                  </div>
+               </div>
+
+               <!-- Collection Stats -->
+               <div class="collection-stats">
+                  <div class="collection-stat">
+                     <span class="collection-stat-number">4</span>
+                     <span class="collection-stat-label">Piezas Únicas</span>
+                  </div>
+                  <div class="collection-stat">
+                     <span class="collection-stat-number">∞</span>
+                     <span class="collection-stat-label">Posibilidades</span>
+                  </div>
+                  <div class="collection-stat">
+                     <span class="collection-stat-number">100%</span>
+                     <span class="collection-stat-label">Autenticidad</span>
+                  </div>
+                  <div class="collection-stat">
+                     <span class="collection-stat-number">2025</span>
+                     <span class="collection-stat-label">Colección</span>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Audiovisual Archive Section -->
+         <section id="archivo" class="archive">
+            <div class="tree-bg tree-bg-1"></div>
+            <div class="tree-bg tree-bg-2"></div>
+            <div class="container">
+               <div class="section-header">
+                  <h2 class="section-title" id="archivoTitle">
+                     <span class="accent">ARCHIVO</span> VISUAL
+                  </h2>
+                  <p class="section-subtitle" id="archivoSubtitle">
+                     Inmersión en el universo STIGMA: campañas, editoriales y
+                     momentos exclusivos.
+                  </p>
+               </div>
+
+               <!-- Featured Campaign -->
+               <div class="archive-featured">
+                  <div class="featured-campaign">
+                     <div class="featured-image">
+                        <img
+                           src="./public/images/productos/product1.png"
+                           alt="Campaña Principal - PIEZA ÚNICA"
+                           class="featured-img"
+                        />
+                        <div class="featured-overlay">
+                           <div class="campaign-badge">CAMPAÑA PRINCIPAL</div>
+                           <h3 class="featured-title">"ESENCIA REBELDE"</h3>
+                           <p class="featured-subtitle">
+                              Campaña de Lanzamiento 2024
+                           </p>
+                        </div>
+                     </div>
+                     <div class="featured-content">
+                        <div class="campaign-meta">
+                           <span class="campaign-date">Marzo 2024</span>
+                           <span class="campaign-type"
+                              >Editorial Fotográfico</span
+                           >
+                        </div>
+                        <h4 class="campaign-description-title">CONCEPTO</h4>
+                        <p class="campaign-description">
+                           "Esencia Rebelde" explora la dualidad entre la
+                           elegancia y la rebeldía. A través de un enfoque
+                           minimalista y contrastes dramáticos, capturamos la
+                           esencia de STIGMA: piezas que no solo adornan, sino
+                           que declaran la autenticidad del portador.
+                        </p>
+                        <div class="campaign-details">
+                           <div class="detail-item">
+                              <span class="detail-label">Fotógrafo:</span>
+                              <span class="detail-value">Alex Rivera</span>
+                           </div>
+                           <div class="detail-item">
+                              <span class="detail-label">Estilista:</span>
+                              <span class="detail-value">María Santos</span>
+                           </div>
+                           <div class="detail-item">
+                              <span class="detail-label">Modelo:</span>
+                              <span class="detail-value">Luna Black</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Campaign Grid -->
+               <div class="archive-grid">
+                  <div class="campaign-card campaign-card-large">
+                     <img
+                        src="./public/images/productos/product2.png"
+                        alt="Campaña PIEZA REBELDE"
+                        class="campaign-img"
+                     />
+                     <div class="campaign-overlay">
+                        <div class="campaign-info">
+                           <h4 class="campaign-name">"AUDACIA NOCTURNA"</h4>
+                           <p class="campaign-category">Campaña Digital</p>
+                           <span class="campaign-year">2024</span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="campaign-card">
+                     <img
+                        src="./public/images/productos/product3.png"
+                        alt="Campaña PIEZA OSCURA"
+                        class="campaign-img"
+                     />
+                     <div class="campaign-overlay">
+                        <div class="campaign-info">
+                           <h4 class="campaign-name">"SOMBRAS ELEGANTES"</h4>
+                           <p class="campaign-category">Lookbook</p>
+                           <span class="campaign-year">2024</span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="campaign-card">
+                     <img
+                        src="./public/images/productos/product4.png"
+                        alt="Campaña PIEZA LEGENDARIA"
+                        class="campaign-img"
+                     />
+                     <div class="campaign-overlay">
+                        <div class="campaign-info">
+                           <h4 class="campaign-name">"LEGADO ETERNO"</h4>
+                           <p class="campaign-category">Editorial</p>
+                           <span class="campaign-year">2024</span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="campaign-card">
+                     <img
+                        src="./public/images/productos/product1detail.png"
+                        alt="Detalle PIEZA ÚNICA"
+                        class="campaign-img"
+                     />
+                     <div class="campaign-overlay">
+                        <div class="campaign-info">
+                           <h4 class="campaign-name">"DETALLES OCULTOS"</h4>
+                           <p class="campaign-category">Macro Photography</p>
+                           <span class="campaign-year">2024</span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="campaign-card">
+                     <img
+                        src="./public/images/productos/product2detail.png"
+                        alt="Detalle PIEZA REBELDE"
+                        class="campaign-img"
+                     />
+                     <div class="campaign-overlay">
+                        <div class="campaign-info">
+                           <h4 class="campaign-name">"TEXTURAS REBELDES"</h4>
+                           <p class="campaign-category">Product Photography</p>
+                           <span class="campaign-year">2024</span>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="campaign-card">
+                     <img
+                        src="./public/images/productos/product3detail.png"
+                        alt="Detalle PIEZA OSCURA"
+                        class="campaign-img"
+                     />
+                     <div class="campaign-overlay">
+                        <div class="campaign-info">
+                           <h4 class="campaign-name">"OSCURIDAD ELEGANTE"</h4>
+                           <p class="campaign-category">Studio Session</p>
+                           <span class="campaign-year">2024</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Archive Stats -->
+               <div class="archive-stats">
+                  <div class="stat-item">
+                     <span class="stat-number">6</span>
+                     <span class="stat-label">Campañas</span>
+                  </div>
+                  <div class="stat-item">
+                     <span class="stat-number">24</span>
+                     <span class="stat-label">Piezas</span>
+                  </div>
+                  <div class="stat-item">
+                     <span class="stat-number">3</span>
+                     <span class="stat-label">Editoriales</span>
+                  </div>
+                  <div class="stat-item">
+                     <span class="stat-number">∞</span>
+                     <span class="stat-label">Inspiración</span>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Contact Section -->
+         <section id="contacto" class="contact">
+            <div class="container">
+               <div class="section-header">
+                  <h2 class="section-title" id="contactoTitle">
+                     <span class="accent">CONECTA</span> CON STIGMA
+                  </h2>
+                  <p class="section-subtitle" id="contactoSubtitle">
+                     Únete a la rebelión. Cada mensaje es una oportunidad para
+                     crear algo extraordinario.
+                  </p>
+               </div>
+
+               <!-- Contact Hero -->
+               <div class="contact-hero">
+                  <div class="contact-statement">
+                     <div class="contact-badge">COMUNICACIÓN DIRECTA</div>
+                     <h3 class="contact-hero-title">"REBELDÍA CONECTADA"</h3>
+                     <p class="contact-hero-text">
+                        En STIGMA, creemos en la conexión auténtica. No somos
+                        solo una marca, somos una comunidad de rebeldes que
+                        comparten la misma visión: expresar la individualidad a
+                        través del arte y el diseño.
+                     </p>
+                     <div class="contact-features">
+                        <div class="contact-feature">
+                           <i class="fas fa-bolt contact-feature-icon"></i>
+                           <span class="contact-feature-text"
+                              >Respuesta Inmediata</span
+                           >
+                        </div>
+                        <div class="contact-feature">
+                           <i class="fas fa-heart contact-feature-icon"></i>
+                           <span class="contact-feature-text"
+                              >Atención Personalizada</span
+                           >
+                        </div>
+                        <div class="contact-feature">
+                           <i class="fas fa-star contact-feature-icon"></i>
+                           <span class="contact-feature-text"
+                              >Experiencia Única</span
+                           >
+                        </div>
+                     </div>
+                  </div>
+                  <div class="contact-visual">
+                     <div class="contact-image-main">
+                        <img
+                           src="./public/images/productos/product1.png"
+                           alt="STIGMA Contact Visual"
+                           class="contact-main-img"
+                        />
+                        <div class="contact-overlay">
+                           <div class="contact-overlay-content">
+                              <div class="contact-overlay-title">STIGMA</div>
+                              <div class="contact-overlay-subtitle">
+                                 CONNECT
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Contact Methods -->
+               <div class="contact-methods">
+                  <div class="method-card method-card-primary">
+                     <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                     </div>
+                     <h4 class="method-title">EMAIL DIRECTO</h4>
+                     <p class="method-description">
+                        Para consultas comerciales, colaboraciones y proyectos
+                        especiales.
+                     </p>
+                     <a href="mailto:info@stigma.com" class="method-link">
+                        <span class="method-link-text" id="contactoEmail"
+                           >info@stigma.com</span
+                        >
+                        <i class="fas fa-arrow-right method-link-icon"></i>
+                     </a>
+                     <div class="method-meta">
+                        <span class="method-response">Respuesta en 24h</span>
+                     </div>
+                  </div>
+
+                  <div class="method-card">
+                     <div class="method-icon">
+                        <i class="fab fa-instagram"></i>
+                     </div>
+                     <h4 class="method-title">INSTAGRAM</h4>
+                     <p class="method-description">
+                        Síguenos para contenido exclusivo, behind-the-scenes y
+                        actualizaciones.
+                     </p>
+                     <a
+                        href="https://instagram.com/stigma"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="method-link"
+                     >
+                        <span class="method-link-text" id="contactoInstagram"
+                           >@stigma_oficial</span
+                        >
+                        <i
+                           class="fas fa-external-link-alt method-link-icon"
+                        ></i>
+                     </a>
+                     <div class="method-meta">
+                        <span class="method-followers">10K+ Seguidores</span>
+                     </div>
+                  </div>
+
+                  <div class="method-card">
+                     <div class="method-icon">
+                        <i class="fab fa-whatsapp"></i>
+                     </div>
+                     <h4 class="method-title">WHATSAPP</h4>
+                     <p class="method-description">
+                        Comunicación directa para consultas urgentes y atención
+                        personalizada.
+                     </p>
+                     <a
+                        href="https://wa.me/1234567890"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="method-link"
+                     >
+                        <span class="method-link-text" id="contactoWhatsapp"
+                           >+1 (234) 567-890</span
+                        >
+                        <i class="fas fa-arrow-right method-link-icon"></i>
+                     </a>
+                     <div class="method-meta">
+                        <span class="method-availability">24/7 Disponible</span>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Contact Form Section -->
+               <div class="contact-form-section">
+                  <div class="form-header">
+                     <h3 class="form-section-title">ENVÍA TU MENSAJE</h3>
+                     <p class="form-section-subtitle">
+                        Cuéntanos sobre tu proyecto, idea o simplemente comparte
+                        tu visión.
+                     </p>
+                  </div>
+
+                  <div class="contact-form-container">
+                     <div class="form-decoration top-right"></div>
+                     <div class="form-decoration bottom-left"></div>
+                     <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                           <div class="form-group">
+                              <label for="name" class="form-label"
+                                 >Nombre Completo</label
+                              >
+                              <input
+                                 type="text"
+                                 id="name"
+                                 placeholder="TU NOMBRE"
+                                 class="form-input"
+                                 required
+                              />
+                           </div>
+                           <div class="form-group">
+                              <label for="email" class="form-label"
+                                 >Email</label
+                              >
+                              <input
+                                 type="email"
+                                 id="email"
+                                 placeholder="TU EMAIL"
+                                 class="form-input"
+                                 required
+                              />
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <label for="subject" class="form-label"
+                              >Asunto</label
+                           >
+                           <select
+                              id="subject"
+                              class="form-input form-select"
+                              required
+                           >
+                              <option value="">SELECCIONA UN ASUNTO</option>
+                              <option value="colaboracion">Colaboración</option>
+                              <option value="compra">
+                                 Compra de Productos
+                              </option>
+                              <option value="prensa">Prensa y Medios</option>
+                              <option value="eventos">Eventos</option>
+                              <option value="otros">Otros</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label for="message" class="form-label"
+                              >Mensaje</label
+                           >
+                           <textarea
+                              id="message"
+                              placeholder="CUÉNTANOS SOBRE TU PROYECTO..."
+                              class="form-textarea"
+                              required
+                           ></textarea>
+                        </div>
+                        <div class="form-actions">
+                           <button
+                              type="submit"
+                              class="btn btn-primary btn-contact"
+                           >
+                              <span class="btn-text">ENVIAR MENSAJE</span>
+                              <i class="fas fa-paper-plane btn-icon"></i>
+                           </button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+
+               <!-- Instagram Feed -->
+               <div class="instagram-section">
+                  <div class="instagram-header">
+                     <h3 class="instagram-title">INSTAGRAM FEED</h3>
+                     <p class="instagram-subtitle">
+                        Últimas actualizaciones y contenido exclusivo
+                     </p>
+                  </div>
+                  <div class="instagram-feed">
+                     <div class="feed-decoration top-left"></div>
+                     <div class="feed-decoration bottom-right"></div>
+                     <div class="feed-grid" id="instagramFeed">
+                        <!-- Instagram posts will be generated by JavaScript -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="container">
+            <p class="footer-text">&copy; 2025 STIGMA. ALL RIGHTS RESERVED.</p>
+            <nav class="footer-nav">
+               <a href="#" class="footer-link">Términos</a>
+               <a href="#" class="footer-link">Privacidad</a>
+            </nav>
+         </div>
+      </footer>
+
+      <script src="site-loader.js"></script>
+      <script src="script.js"></script>
+   </body>
+</html>

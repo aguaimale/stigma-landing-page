@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>STIGMA - Pieza Detalle</title>
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="stylesheet" href="producto.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Monaco&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Bahiana&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+   </head>
+   <body>
+      <!-- Header -->
+      <header class="header">
+         <div class="container">
+            <a href="index.html" class="logo">
+               <img
+                  src="./public/images/stigma_transparente.png"
+                  alt="STIGMA Logo"
+                  class="logo-img"
+               />
+               <span class="logo-text">STIGMA</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+               <span class="hamburger-line"></span>
+               <span class="hamburger-line"></span>
+               <span class="hamburger-line"></span>
+            </button>
+            <nav class="nav" id="nav">
+               <a href="index.html#inicio" class="nav-link">Inicio</a>
+               <a href="index.html#sobre-stigma" class="nav-link">Manifiesto</a>
+               <a href="index.html#catalogo" class="nav-link">Catálogo</a>
+               <a href="index.html#archivo" class="nav-link">Archivo</a>
+               <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+         </div>
+      </header>
+
+      <main>
+         <!-- Product Detail Section -->
+         <section class="product-detail">
+            <div class="container">
+               <div class="product-content">
+                  <!-- Product Images -->
+                  <div class="product-images">
+                     <div class="main-image">
+                        <img
+                           id="mainImage"
+                           src="./public/images/productos/product1.png"
+                           alt="Producto Principal"
+                           class="product-main-img"
+                        />
+                     </div>
+                     <div class="image-gallery">
+                        <div
+                           class="gallery-image active"
+                           onclick="changeImage(0)"
+                        >
+                           <img
+                              src="./public/images/productos/product1.png"
+                              alt="Imagen 1"
+                              class="gallery-img"
+                           />
+                        </div>
+                        <div class="gallery-image" onclick="changeImage(1)">
+                           <img
+                              src="./public/images/productos/product1detail.png"
+                              alt="Imagen 2"
+                              class="gallery-img"
+                           />
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Product Info -->
+                  <div class="product-info">
+                     <div class="product-header">
+                        <h1 class="product-title" id="productTitle">
+                           PIEZA ÚNICA
+                        </h1>
+                        <p class="product-subtitle">Colección Limitada</p>
+                        <div class="product-price" id="productPrice">
+                           $299.00
+                        </div>
+                     </div>
+
+                     <div class="product-description">
+                        <h3 class="description-title">DESCRIPCIÓN</h3>
+                        <p class="description-text" id="productDescription">
+                           Esta pieza única de STIGMA representa la esencia de
+                           la rebeldía y la individualidad. Diseñada con
+                           materiales premium y acabados meticulosos, cada
+                           detalle ha sido cuidadosamente considerado para crear
+                           un accesorio que no solo complementa tu estilo, sino
+                           que lo define.
+                        </p>
+                        <p class="description-text">
+                           Inspirada en la oscuridad y la naturaleza indómita,
+                           esta pieza es una declaración de autenticidad.
+                           Perfecta para aquellos que se atreven a ser
+                           diferentes y llevan su rebeldía con orgullo.
+                        </p>
+                     </div>
+
+                     <div class="product-details">
+                        <h3 class="details-title">DETALLES</h3>
+                        <div class="details-grid">
+                           <div class="detail-item">
+                              <span class="detail-label">Material:</span>
+                              <span class="detail-value"
+                                 >Acero inoxidable premium</span
+                              >
+                           </div>
+                           <div class="detail-item">
+                              <span class="detail-label">Acabado:</span>
+                              <span class="detail-value"
+                                 >Negro mate con detalles dorados</span
+                              >
+                           </div>
+                           <div class="detail-item">
+                              <span class="detail-label">Tamaño:</span>
+                              <span class="detail-value"
+                                 >Ajustable (18-22cm)</span
+                              >
+                           </div>
+                           <div class="detail-item">
+                              <span class="detail-label">Peso:</span>
+                              <span class="detail-value">45g</span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="product-actions">
+                        <button
+                           class="btn btn-primary btn-full"
+                           onclick="addToCart()"
+                        >
+                           <i class="fas fa-shopping-cart"></i>
+                           Agregar al Carrito
+                        </button>
+                        <button
+                           class="btn btn-outline btn-full"
+                           onclick="addToWishlist()"
+                        >
+                           <i class="fas fa-heart"></i>
+                           Agregar a Favoritos
+                        </button>
+                     </div>
+
+                     <div class="product-meta">
+                        <div class="meta-item">
+                           <i class="fas fa-shipping-fast"></i>
+                           <span
+                              >Envío gratuito en pedidos superiores a $500</span
+                           >
+                        </div>
+                        <div class="meta-item">
+                           <i class="fas fa-undo"></i>
+                           <span>Devolución gratuita en 30 días</span>
+                        </div>
+                        <div class="meta-item">
+                           <i class="fas fa-shield-alt"></i>
+                           <span>Garantía de 2 años</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Related Products Section -->
+         <section class="related-products">
+            <div class="container">
+               <div class="section-header">
+                  <h2 class="section-title">
+                     <span class="accent">PIEZAS</span> RELACIONADAS
+                  </h2>
+                  <p class="section-subtitle">
+                     Descubre más accesorios de la colección STIGMA
+                  </p>
+               </div>
+               <div class="related-grid" id="relatedGrid">
+                  <!-- Related products will be generated by JavaScript -->
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="container">
+            <p class="footer-text">&copy; 2025 STIGMA. ALL RIGHTS RESERVED.</p>
+            <nav class="footer-nav">
+               <a href="#" class="footer-link">Términos</a>
+               <a href="#" class="footer-link">Privacidad</a>
+            </nav>
+         </div>
+      </footer>
+
+      <script src="producto.js"></script>
+      <script>
+         // Mobile Navigation
+         document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const nav = document.getElementById('nav');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Toggle mobile menu
+            mobileMenuBtn.addEventListener('click', function () {
+               mobileMenuBtn.classList.toggle('active');
+               nav.classList.toggle('active');
+            });
+
+            // Close menu when clicking on nav links
+            navLinks.forEach((link) => {
+               link.addEventListener('click', function () {
+                  mobileMenuBtn.classList.remove('active');
+                  nav.classList.remove('active');
+               });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (e) {
+               if (
+                  !mobileMenuBtn.contains(e.target) &&
+                  !nav.contains(e.target)
+               ) {
+                  mobileMenuBtn.classList.remove('active');
+                  nav.classList.remove('active');
+               }
+            });
+         });
+      </script>
+   </body>
+</html>
