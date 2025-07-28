@@ -2,22 +2,6 @@
 
 console.log('🚀 producto.js cargado correctamente');
 
-document.addEventListener('DOMContentLoaded', function () {
-   console.log('📄 DOM cargado, inicializando...');
-
-   try {
-      // Initialize all functionality
-      initializeProductData();
-      initializeRelatedProducts();
-      updateCurrentYear();
-      initializeAnimations();
-      initializeImageGallery();
-      console.log('✅ Todas las funciones inicializadas correctamente');
-   } catch (error) {
-      console.error('❌ Error durante la inicialización:', error);
-   }
-});
-
 // Product database - this would normally come from a database or API
 const productsDatabase = {
    1: {
@@ -142,37 +126,49 @@ const relatedProducts = [
    },
 ];
 
-function initializeProductData() {
-   console.log('🔍 Inicializando datos del producto...');
+// Función principal que se ejecuta cuando se carga la página
+function initializePage() {
+   console.log('📄 Inicializando página de producto...');
 
    try {
-      // Get URL parameters to determine which product to show
+      // Obtener ID del producto de la URL
       const urlParams = new URLSearchParams(window.location.search);
       const productId = parseInt(urlParams.get('id')) || 1;
 
-      console.log('📋 Product ID from URL:', productId);
-      console.log('📦 Available products:', Object.keys(productsDatabase));
+      console.log('🔍 ID del producto de la URL:', productId);
+      console.log('📦 Productos disponibles:', Object.keys(productsDatabase));
 
-      // Load the correct product data based on ID
-      productData = productsDatabase[productId] || productsDatabase[1];
+      // Obtener datos del producto
+      productData = productsDatabase[productId];
 
-      console.log('✅ Selected product:', productData);
+      if (!productData) {
+         console.warn('⚠️ Producto no encontrado, usando producto 1');
+         productData = productsDatabase[1];
+      }
 
+      console.log('✅ Producto seleccionado:', productData);
+
+      // Cargar datos del producto
       loadProductData(productData);
+
+      // Inicializar otras funcionalidades
+      initializeRelatedProducts();
+      updateCurrentYear();
+      initializeAnimations();
+      initializeImageGallery();
+
+      console.log('✅ Página inicializada correctamente');
    } catch (error) {
-      console.error('❌ Error en initializeProductData:', error);
-      // Fallback to product 1
-      productData = productsDatabase[1];
-      loadProductData(productData);
+      console.error('❌ Error durante la inicialización:', error);
    }
 }
 
-// Load Product Data
+// Cargar datos del producto en la página
 function loadProductData(product) {
    console.log('📝 Cargando datos del producto:', product.name);
 
    try {
-      // Update product title
+      // Actualizar título del producto
       const productTitle = document.getElementById('productTitle');
       if (productTitle) {
          productTitle.textContent = product.name;
@@ -181,28 +177,28 @@ function loadProductData(product) {
          console.warn('⚠️ Elemento productTitle no encontrado');
       }
 
-      // Update product subtitle
+      // Actualizar subtítulo del producto
       const productSubtitle = document.querySelector('.product-subtitle');
       if (productSubtitle && product.subtitle) {
          productSubtitle.textContent = product.subtitle;
          console.log('✅ Subtítulo actualizado:', product.subtitle);
       }
 
-      // Update product price
+      // Actualizar precio del producto
       const productPrice = document.getElementById('productPrice');
       if (productPrice) {
          productPrice.textContent = product.price;
          console.log('✅ Precio actualizado:', product.price);
       }
 
-      // Update product description
+      // Actualizar descripción del producto
       const productDescription = document.getElementById('productDescription');
       if (productDescription) {
          productDescription.textContent = product.description;
          console.log('✅ Descripción actualizada');
       }
 
-      // Update main image
+      // Actualizar imagen principal
       const mainImage = document.getElementById('mainImage');
       if (mainImage && product.images.length > 0) {
          mainImage.src = product.images[0];
@@ -210,10 +206,10 @@ function loadProductData(product) {
          console.log('✅ Imagen principal actualizada:', product.images[0]);
       }
 
-      // Update gallery images
+      // Actualizar galería de imágenes
       updateGalleryImages(product.galleryImages);
 
-      // Update product details
+      // Actualizar detalles del producto
       updateProductDetails(product.details);
 
       console.log('✅ Todos los datos del producto cargados correctamente');
@@ -431,8 +427,11 @@ function showNotification(message, type = 'info') {
    }, 3000);
 }
 
-// Add hover effects for interactive elements
+// Inicializar la página cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function () {
+   console.log('📄 DOM cargado, inicializando página...');
+   initializePage();
+
    // Add hover effects to buttons
    const buttons = document.querySelectorAll('.btn');
    buttons.forEach((button) => {
