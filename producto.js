@@ -140,8 +140,14 @@ function initializeProductData() {
    const urlParams = new URLSearchParams(window.location.search);
    const productId = parseInt(urlParams.get('id')) || 1;
 
+   console.log('Product ID from URL:', productId);
+   console.log('Available products:', Object.keys(productsDatabase));
+
    // Load the correct product data based on ID
    productData = productsDatabase[productId] || productsDatabase[1];
+
+   console.log('Selected product:', productData);
+
    loadProductData(productData);
 }
 
