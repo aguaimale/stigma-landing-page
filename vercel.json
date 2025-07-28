@@ -37,6 +37,14 @@
          "dest": "/producto.html"
       },
       {
+         "src": "/producto.html",
+         "dest": "/producto.html"
+      },
+      {
+         "src": "/admin.html",
+         "dest": "/admin.html"
+      },
+      {
          "src": "/(.*)",
          "dest": "/index.html"
       }

@@ -298,8 +298,9 @@ function showProductDetails(productId) {
 
 function consultProduct(productId) {
    console.log(`Consult product ${productId}`);
-   // Navigate to product detail page
-   window.location.href = `producto.html?id=${productId}`;
+   // Navigate to product detail page with absolute path
+   const baseUrl = window.location.origin;
+   window.location.href = `${baseUrl}/producto.html?id=${productId}`;
 }
 
 // Archive Functions
