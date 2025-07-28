@@ -326,10 +326,13 @@ class StigmaSiteLoader {
                     <button class="product-action-btn" onclick="toggleFavorite(${product.id})">
                         <i class="fas fa-heart"></i>
                     </button>
-                    <button class="product-action-btn primary" onclick="consultProduct(${product.id})">
-                        Consultar Pieza
+                    <button class="product-action-btn" onclick="showProductDetails(${product.id})">
+                        <i class="fas fa-comment"></i>
                     </button>
                 </div>
+                <button class="btn btn-outline product-consult-btn" onclick="consultProduct(${product.id})">
+                    Consultar Pieza
+                </button>
             </div>
         `;
 
