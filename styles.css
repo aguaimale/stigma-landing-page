@@ -2793,6 +2793,19 @@ body {
 
    .manifesto-stats {
       grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+   }
+
+   .manifesto-stat {
+      padding: 1.5rem;
+   }
+
+   .manifesto-stat-number {
+      font-size: 2.5rem;
+   }
+
+   .manifesto-stat-label {
+      font-size: 0.75rem;
    }
 
    /* Contact responsive styles */
@@ -2829,6 +2842,19 @@ body {
 
    .collection-stats {
       grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+   }
+
+   .collection-stat {
+      padding: 1.5rem;
+   }
+
+   .collection-stat-number {
+      font-size: 2.5rem;
+   }
+
+   .collection-stat-label {
+      font-size: 0.75rem;
    }
 
    .catalog-hero-title {
@@ -2973,4 +2999,65 @@ html {
 .form-textarea:focus {
    outline: 2px solid #f0f0f0;
    outline-offset: 2px;
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+   .manifesto-stats {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+   }
+
+   .collection-stats {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+   }
+
+   .manifesto-stat,
+   .collection-stat {
+      padding: 1rem;
+   }
+
+   .manifesto-stat-number,
+   .collection-stat-number {
+      font-size: 2rem;
+   }
+
+   .manifesto-stat-label,
+   .collection-stat-label {
+      font-size: 0.7rem;
+   }
+
+   .hero-stats {
+      gap: 0.75rem;
+   }
+
+   .hero-stats .stat-item {
+      padding: 0.75rem;
+   }
+
+   .hero-stats .stat-number {
+      font-size: 1.5rem;
+   }
+
+   .hero-stats .stat-label {
+      font-size: 0.7rem;
+   }
+
+   .archive-stats {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+   }
+
+   .archive-stats .stat-item {
+      padding: 0.75rem;
+   }
+
+   .archive-stats .stat-number {
+      font-size: 1.5rem;
+   }
+
+   .archive-stats .stat-label {
+      font-size: 0.7rem;
+   }
 }
