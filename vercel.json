@@ -21,20 +21,20 @@
    ],
    "routes": [
       {
-         "src": "/admin",
-         "dest": "/admin.html"
-      },
-      {
-         "src": "/producto",
-         "dest": "/producto.html"
+         "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
+         "dest": "/$1"
       },
       {
          "src": "/public/(.*)",
          "dest": "/public/$1"
       },
       {
-         "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
-         "dest": "/$1"
+         "src": "/admin",
+         "dest": "/admin.html"
+      },
+      {
+         "src": "/producto",
+         "dest": "/producto.html"
       },
       {
          "src": "/(.*)",
