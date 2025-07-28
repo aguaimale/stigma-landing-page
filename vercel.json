@@ -3,24 +3,34 @@
    "name": "stigma-landing-page",
    "builds": [
       {
-         "src": "server.js",
-         "use": "@vercel/node"
+         "src": "*.html",
+         "use": "@vercel/static"
+      },
+      {
+         "src": "*.css",
+         "use": "@vercel/static"
+      },
+      {
+         "src": "*.js",
+         "use": "@vercel/static"
+      },
+      {
+         "src": "public/**",
+         "use": "@vercel/static"
       }
    ],
    "routes": [
       {
          "src": "/admin",
-         "dest": "/admin.html",
-         "status": 200
+         "dest": "/admin.html"
       },
       {
          "src": "/producto",
-         "dest": "/producto.html",
-         "status": 200
+         "dest": "/producto.html"
       },
       {
-         "src": "/api/(.*)",
-         "dest": "/server.js"
+         "src": "/public/(.*)",
+         "dest": "/public/$1"
       },
       {
          "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
@@ -28,11 +38,7 @@
       },
       {
          "src": "/(.*)",
-         "dest": "/index.html",
-         "status": 200
+         "dest": "/index.html"
       }
-   ],
-   "env": {
-      "NODE_ENV": "production"
-   }
+   ]
 }
