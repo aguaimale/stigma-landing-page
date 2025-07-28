@@ -1,12 +1,21 @@
 // STIGMA Product Page JavaScript
 
+console.log('🚀 producto.js cargado correctamente');
+
 document.addEventListener('DOMContentLoaded', function () {
-   // Initialize all functionality
-   initializeProductData();
-   initializeRelatedProducts();
-   updateCurrentYear();
-   initializeAnimations();
-   initializeImageGallery();
+   console.log('📄 DOM cargado, inicializando...');
+
+   try {
+      // Initialize all functionality
+      initializeProductData();
+      initializeRelatedProducts();
+      updateCurrentYear();
+      initializeAnimations();
+      initializeImageGallery();
+      console.log('✅ Todas las funciones inicializadas correctamente');
+   } catch (error) {
+      console.error('❌ Error durante la inicialización:', error);
+   }
 });
 
 // Product database - this would normally come from a database or API
@@ -102,15 +111,14 @@ const productsDatabase = {
       ],
       details: {
          material: 'Acero inoxidable premium',
-         finish: 'Negro mate con detalles dorados y plateados',
-         size: 'Ajustable (18-22cm)',
+         finish: 'Negro profundo con detalles dorados',
+         size: 'Ajustable (20-24cm)',
          weight: '55g',
       },
    },
 };
 
-// Default product data
-let productData = productsDatabase[1];
+let productData = null;
 
 // Related products data
 const relatedProducts = [
@@ -134,61 +142,84 @@ const relatedProducts = [
    },
 ];
 
-// Initialize Product Data
 function initializeProductData() {
-   // Get URL parameters to determine which product to show
-   const urlParams = new URLSearchParams(window.location.search);
-   const productId = parseInt(urlParams.get('id')) || 1;
+   console.log('🔍 Inicializando datos del producto...');
 
-   console.log('Product ID from URL:', productId);
-   console.log('Available products:', Object.keys(productsDatabase));
+   try {
+      // Get URL parameters to determine which product to show
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = parseInt(urlParams.get('id')) || 1;
 
-   // Load the correct product data based on ID
-   productData = productsDatabase[productId] || productsDatabase[1];
+      console.log('📋 Product ID from URL:', productId);
+      console.log('📦 Available products:', Object.keys(productsDatabase));
 
-   console.log('Selected product:', productData);
+      // Load the correct product data based on ID
+      productData = productsDatabase[productId] || productsDatabase[1];
 
-   loadProductData(productData);
+      console.log('✅ Selected product:', productData);
+
+      loadProductData(productData);
+   } catch (error) {
+      console.error('❌ Error en initializeProductData:', error);
+      // Fallback to product 1
+      productData = productsDatabase[1];
+      loadProductData(productData);
+   }
 }
 
 // Load Product Data
 function loadProductData(product) {
-   // Update product title
-   const productTitle = document.getElementById('productTitle');
-   if (productTitle) {
-      productTitle.textContent = product.name;
+   console.log('📝 Cargando datos del producto:', product.name);
+
+   try {
+      // Update product title
+      const productTitle = document.getElementById('productTitle');
+      if (productTitle) {
+         productTitle.textContent = product.name;
+         console.log('✅ Título actualizado:', product.name);
+      } else {
+         console.warn('⚠️ Elemento productTitle no encontrado');
+      }
+
+      // Update product subtitle
+      const productSubtitle = document.querySelector('.product-subtitle');
+      if (productSubtitle && product.subtitle) {
+         productSubtitle.textContent = product.subtitle;
+         console.log('✅ Subtítulo actualizado:', product.subtitle);
+      }
+
+      // Update product price
+      const productPrice = document.getElementById('productPrice');
+      if (productPrice) {
+         productPrice.textContent = product.price;
+         console.log('✅ Precio actualizado:', product.price);
+      }
+
+      // Update product description
+      const productDescription = document.getElementById('productDescription');
+      if (productDescription) {
+         productDescription.textContent = product.description;
+         console.log('✅ Descripción actualizada');
+      }
+
+      // Update main image
+      const mainImage = document.getElementById('mainImage');
+      if (mainImage && product.images.length > 0) {
+         mainImage.src = product.images[0];
+         mainImage.alt = product.name;
+         console.log('✅ Imagen principal actualizada:', product.images[0]);
+      }
+
+      // Update gallery images
+      updateGalleryImages(product.galleryImages);
+
+      // Update product details
+      updateProductDetails(product.details);
+
+      console.log('✅ Todos los datos del producto cargados correctamente');
+   } catch (error) {
+      console.error('❌ Error en loadProductData:', error);
    }
-
-   // Update product subtitle
-   const productSubtitle = document.querySelector('.product-subtitle');
-   if (productSubtitle && product.subtitle) {
-      productSubtitle.textContent = product.subtitle;
-   }
-
-   // Update product price
-   const productPrice = document.getElementById('productPrice');
-   if (productPrice) {
-      productPrice.textContent = product.price;
-   }
-
-   // Update product description
-   const productDescription = document.getElementById('productDescription');
-   if (productDescription) {
-      productDescription.textContent = product.description;
-   }
-
-   // Update main image
-   const mainImage = document.getElementById('mainImage');
-   if (mainImage && product.images.length > 0) {
-      mainImage.src = product.images[0];
-      mainImage.alt = product.name;
-   }
-
-   // Update gallery images
-   updateGalleryImages(product.galleryImages);
-
-   // Update product details
-   updateProductDetails(product.details);
 }
 
 // Update Gallery Images
